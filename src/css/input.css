@@ -1,1 +1,32 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: relation;
+    src: url("../assets/font/Relationship.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: roceline;
+    src: url("../assets/font/roceline.ttf") format("truetype");
+}
+
+@theme {
+    /* Color */
+    --color-yellow: #EBFB29;
+    --color-blue: #0068FF;
+    --color-pink:#FF296F;
+
+    --color-blue-2: #62A4EC;
+    --color-blue-3: #C4F0FF;
+
+    --color-yellow-2: #E2FD2E;
+    --color-text: #1e1e1e;
+
+    /* Fonts */
+    --font-arabic: "Amiri", serif;
+    --font-header: "roceline", serif;
+    --font-relation: "relation", serif;
+    --font-description: "EB Garamond", serif;
+}

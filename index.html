@@ -5,56 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Ramadhan</title>
 
-    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="src/dist/output.css">
 
-    <!-- font arab -->
-    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-     <!-- font deskripsi -->
-     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
-
-    <style>
-        @font-face {
-            font-family: relation;
-            src: url("assets/font/Relationship.ttf") format("truetype");
-        }
-
-        @font-face {
-            font-family: roceline;
-            src: url("assets/font/roceline.ttf") format("truetype");
-        }
-        :root{
-            --yellow : #EBFB29;
-            --blue : #0068FF;
-            --pink : #FF296F;
-
-            --blue2 : #62A4EC;
-            --blue3 : #C4F0FF;
-
-            --yellow2 : #E2FD2E;
-
-            --text : #1e1e1e;
-        }
-        .font-arabic {
-        font-family: 'Amiri', serif;
-        }
-        .font-header {
-            font-family: 'roceline', serif;
-        }
-        .font-description{
-            font-family: 'Garamond', serif;
-        }
-        .font-relation{
-            font-family: 'relation', serif;
-        }
-    </style>
 </head>
-<body class="bgcream text-[var(--text)]">
-    <header class="bg-[var(--blue)] text-white p-10">
+
+<body class="text-text">
+    <header class="bg-blue text-white p-10">
         <div>
             <h1 class="text-5xl md:text-8xl font-relation text-white">Website Ramadhan</h1>
-            <h2 class="text-3xl md:text-5xl font-header text-[var(--yellow)] ml-0 md:ml-[400px]">Doa-Doa </h2>
+            <h2 class="text-3xl md:text-5xl font-header text-yellow ml-0 md:ml-100">Doa-Doa </h2>
         </div>
         <div>
             <img src="" alt="">
@@ -65,23 +29,23 @@
         <!-- section sahur -->
         <section class="w-full space-y-6">
             <article class="p-2 space-y-4">
-                <h1 class="text-5xl font-bold font-header text-right">\\ Doa saat sahur</h1>
+                <h1 class="text-5xl font-relation text-right font-bold">\\ Doa saat sahur</h1>
                 
                 <!-- item 1 -->
                 <!-- diambil dari sini: https://rumaysho.com/8052-doa-mustajab-di-waktu-sahur.html -->
                <article class="flex flex-wrap sm:flex-row gap-4 w-full">
-                    <article class="w-[950px] border border-solid border-black border-3 rounded">
-                        <div class="w-full bg-[var(--pink)]">
+                    <article class="w-full border-solid border-black border rounded-4xl">
+                        <div class="bg-pink custom w-full rounded-t-4xl">
                             <h1 class="ml-5 p-2 text-4xl font-relation text-white">Berzikir saat sahur</h1>
                         </div>
-                        <hr class="border-3 border-black">
+                        <hr class="border-0.5 border-black border-solid">
 
                         <div class="p-10">
                             <p class="font-description">
                                 Dalam hadits ini kita akan melihat keberkahan waktu sahur tersebut. Dari Abu Hurairah, Nabi shallallahu ‘alaihi wa sallam bersabda,
                             </p>
 
-                            <p class="font-arabic text-3xl mt-7 mb-7 text-right leading-[60px]">
+                            <p class="font-arabic text-3xl mt-7 mb-7 text-right leading-15">
                             يَنْزِلُ رَبُّنَا تَبَارَكَ وَتَعَالَى كُلَّ لَيْلَةٍ إِلَى السَّمَاءِ الدُّنْيَا حِينَ يَبْقَى ثُلُثُ اللَّيْلِ الآخِرُ يَقُولُ مَنْ يَدْعُونِى فَأَسْتَجِيبَ لَهُ مَنْ يَسْأَلُنِى فَأُعْطِيَهُ مَنْ يَسْتَغْفِرُنِى فَأَغْفِرَ لَهُ
                             </p>
 
@@ -93,56 +57,78 @@
 
                     <!-- item 2 -->
                      <!-- Diambil dari : https://quran.nu.or.id/doa -->
-                    <article class="w-[830px] h-full border border-solid border-black border-3 rounded">
-                        <div class="w-full bg-[var(--blue3)]">
-                            <h1 class="ml-5 p-2 text-4xl font-relation text-black">Berzikir Pagi</h1>
+                    <article class="w-fit h-full border border-solid border-black rounded-4xl">
+                        <div class="w-full bg-pink rounded-t-4xl">
+                            <h1 class="ml-5 p-2 text-4xl font-relation text-white">Berzikir Pagi</h1>
                         </div>
+                        <hr class="border-0.5 border-black border-solid">
 
                         <div class="p-10">
                             <p class="font-description">
                                 Dalam hadits ini kita akan melihat keberkahan waktu sahur tersebut. Dari Abu Hurairah, Nabi shallallahu ‘alaihi wa sallam bersabda,
                             </p>
 
-                            <p class="font-arabic text-3xl mt-7 mb-7 text-right leading-[60px]">
+                            <p class="font-arabic text-3xl mt-7 mb-7 text-right leading-15">
                                 فَسُبْحَانَ اللَّهِ حِينَ تُمْسُونَ وَحِينَ تُصْبِحُونَ       
                             </p>
 
                             <p class="font-description">
-                                QS. Ar-Rum ayat 17: “Maka bertasbihlah kepada Allah SWT di waktu umat Muslim br berada saat sore hari dan waktu di mana umat Muslim berada di pagi hari”.
+                                QS. Ar-Rum ayat 17: <br>
+                                “Maka bertasbihlah kepada Allah SWT di waktu umat Muslim br berada saat sore hari dan waktu di mana umat Muslim berada di pagi hari”.
                             </p>
                         </div>
                     </article>
 
                     <!-- item 3 -->
-                    <article class="w-fit h-fit border border-solid border-black border-3 rounded">
-                        <div class="w-full bg-[var(--blue)]">
+                    <article class="w-fit h-fit border border-solid border-black rounded-4xl">
+                        <div class="w-full bg-pink rounded-t-4xl">
                             <h1 class="ml-5 p-2 text-4xl font-relation text-white">Doa bangun Tidur</h1>
                         </div>
+                        <hr class="border-0.5 border-black border-solid">
 
                         <div class="p-10">
-                            <p class="font-arabic text-3xl mt-7 mb-7 text-right leading-[60px]">
+                            <p class="font-arabic text-3xl mt-7 mb-7 text-right leading-15">
                                 اَلْحَمْدُ ِللّٰهِ الَّذِيْ أَحْيَانَا بَعْدَمَا أَمَاتَنَا وَإِلَيْهِ النُّشُوْرُ
                             </p>
 
                             <p class="font-description">
-                                “Segala puji bagi Allah yang menghidupkanku kembali setelah mematikanku dan hanya kepada-Nya akan bangkit.”
+                                “Segala puji bagi Allah yang menghidupkanku kembali setelah mematikanku dan hanya kepada-Nya akan <br>bangkit.”
                             </p>
                         </div>
                     </article>
 
                     <!-- item 4 -->
-                    <article class="w-fit h-fit border border-solid border-black border-3 rounded">
-                        <div class="w-full bg-[var(--yellow2)]">
-                            <h1 class="ml-5 p-2 text-4xl font-relation text-black">Doa Masuk Masjid</h1>
+                    <article class="w-fit h-fit border border-solid border-black rounded-4xl">
+                        <div class="w-full bg-pink rounded-t-4xl">
+                            <h1 class="ml-5 p-2 text-4xl font-relation text-white">Doa Masuk Masjid</h1>
                         </div>
+                        <hr class="border-0.5 border-black border-solid">
 
                         <div class="p-10">
-                            <p class="font-arabic text-3xl mt-7 mb-7 text-right leading-[60px]">
+                            <p class="font-arabic text-3xl mt-7 mb-7 text-right leading-15">
                                 اَللّٰهُمَّ اغْفِرْ لِيْ ذُنُوْبِيْ وَافْتَحْ لِيْ أَبْوَابَ رَحْمَتِكَ
                             </p>
 
                             <p class="font-description">
                                 “Ya Allah, ampuni segala dosaku dan bukalah bagiku segala pintu rahmat-Mu.”
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- item 5 -->
+                    <article class="w-fit h-fit border border-solid border-black rounded-4xl">
+                        <div class="w-full bg-pink rounded-t-4xl">
+                            <h1 class="ml-5 p-2 text-4xl font-relation text-white">Doa Untuk Orang Tua</h1>
+                        </div>
+                        <hr class="border-0.5 border-black border-solid">
+
+                        <div class="p-10">
+                            <p class="font-arabic text-3xl mt-7 mb-7 text-right leading-15">
+                            رَبِّ اغْفِرْ لِيْ وَلِوَالِدَيَّ وَارْحَمْهُمَا كَمَا رَبَّيَانِيْ صَغِيْرً                            
+                            </p>
+
+                            <p class="font-description">
+                                “Tuhanku, ampunilah diriku dan kedua orang tuaku, sayangilah mereka sebagaimana mereka menyayangiku di waktu aku kecil.”
                             </p>
                         </div>
                     </article>
@@ -154,21 +140,22 @@
         <!-- section buka -->
         <section class="w-full space-y-6">
             <article class="p-2 space-y-4">
-                <h1 class="text-5xl font-bold font-header text-left">Doa saat berbuka //</h1>
+                <h1 class="text-5xl font-bold font-relation text-left">Doa saat berbuka //</h1>
                 
                 <!-- item 1 -->
                 <article class="flex flex-col sm:flex-row gap-4">
-                    <article class="w-fit border border-solid border-black border-3 rounded">
-                        <div class="w-full bg-[var(--blue2)]">
-                            <h1 class="ml-5 p-2 text-4xl font-relation text-white">Doa Berbuka Puasa</h1>
+                    <article class="w-fit border border-solid border-black rounded-4xl">
+                        <div class="w-full rounded-t-4xl bg-yellow-2">
+                            <h1 class="ml-5 p-2 text-4xl font-relation text-black">Doa Berbuka Puasa</h1>
                         </div>
+                        <hr class="border-0.5 border-black border-solid">
 
                         <div class="p-10">
                             <p class="font-description">
                                 Dalam hadits ini kita akan melihat keberkahan waktu sahur tersebut. Dari Abu Hurairah, Nabi shallallahu ‘alaihi wa sallam bersabda,
                             </p>
 
-                            <p class="font-arabic text-3xl mt-7 mb-7 text-right leading-[60px]">
+                            <p class="font-arabic text-3xl mt-7 mb-7 text-right leading-15">
                                 ذَهَبَ الظَّمَـأُ، وابْــتَلَّتِ العُرُوقُ، وثَــبَتَ الأَجْرُ إِن شَاءَ اللهُ
                             </p>
 
