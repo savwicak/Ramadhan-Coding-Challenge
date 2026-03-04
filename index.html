@@ -15,14 +15,21 @@
 </head>
 
 <body class="text-text">
-    <header class="bg-blue text-white p-10">
-        <div>
-            <h1 class="text-5xl md:text-8xl font-relation text-white">Website Ramadhan</h1>
-            <h2 class="text-3xl md:text-5xl font-header text-yellow ml-0 md:ml-100">Doa-Doa </h2>
+    <header class = "p-10">
+        <hr class="border border-solid border-black mb-12">
+        <div class="text-center">
+            <h1 class="text-2xl md:text-5xl font-relation text-black">Ramadhan Mubarak</h1>
+            <h2 class="text-5xl md:text-8xl font-header text-green">Doa-Doa </h2>
         </div>
-        <div>
-            <img src="" alt="">
-        </div>
+        <hr class="border border-solid border-black mt-12">
+        <nav class="p-6 text-black font-description">
+            <ul class="flex justify-center gap-10">
+                <li class="cursor-pointer hover:text-pink">Home</li>
+                <li class="cursor-pointer hover:text-pink">About</li>
+                <li class="cursor-pointer hover:text-pink">Doa-Doa</li>
+            </ul>
+        </nav>
+        <hr class="border border-solid border-black">
     </header>
 
     <main class="max-w-8xl mx-auto px-10 py-10 md:flex-row space-y-9">
@@ -33,9 +40,43 @@
                 
                 <!-- item 1 -->
                 <!-- diambil dari sini: https://rumaysho.com/8052-doa-mustajab-di-waktu-sahur.html -->
-               <article class="flex flex-wrap sm:flex-row gap-4 w-full">
-                    <article class="w-full border-solid border-black border rounded-4xl">
-                        <div class="bg-pink custom w-full rounded-t-4xl">
+               <article class="flex flex-col gap-10 w-full">
+
+                    <div class="flex flex-col md:flex-row justify-between items-start w-full gap-5">
+                        <article class="w-fit md:w-4/6 border border-black rounded-3xl">
+                            <div class="bg-green w-full rounded-t-3xl">
+                                <h1 class="ml-5 p-2 text-4xl font-relation text-white">Doa bangun Tidur</h1>
+                            </div>
+                            <hr class="border-0.5 border-black border-solid">
+
+                            <div class="p-10">
+                                <p class="font-arabic text-3xl mt-7 mb-7 text-right leading-15">
+                                    اَلْحَمْدُ ِللّٰهِ الَّذِيْ أَحْيَانَا بَعْدَمَا أَمَاتَنَا وَإِلَيْهِ النُّشُوْرُ
+                                </p>
+
+                                <p class="font-description">
+                                    “Segala puji bagi Allah yang menghidupkanku kembali setelah mematikanku dan hanya kepada-Nya akan <br>bangkit.”
+                                </p>
+                            </div>
+                        </article>
+
+                        <div class="w-fit md:w-2/6 p-4 text-black">
+                            <h1 class="text-4xl text-green align-start font-header mb-8">Recently Viewed</h1>
+                            <hr class="border border-solid w-full">
+                            <h2 class="text-4xl font-relation cursor-pointer text-end mb-7 hover:-translate-x-10 transform transition duration-300">Doa Masuk Kamar Mandi</h2>
+
+                            <hr class="border border-solid w-full">
+                            <h2 class="text-4xl font-relation cursor-pointer text-end mb-7 hover:-translate-x-10 transform transition duration-300">Doa Setelah Makan</h2>
+
+                            <hr class="border border-solid w-full">
+                            <h2 class="text-4xl font-relation cursor-pointer text-end mb-7 hover:-translate-x-10 transform transition duration-300">Doa Turunnya Hujan</h2>
+
+                        </div>
+                    </div>
+
+                    <!-- item 2 -->
+                    <article class="md:w-full w-fit border border-black rounded-3xl">
+                        <div class="bg-green w-full rounded-t-3xl">
                             <h1 class="ml-5 p-2 text-4xl font-relation text-white">Berzikir saat sahur</h1>
                         </div>
                         <hr class="border-0.5 border-black border-solid">
@@ -45,7 +86,7 @@
                                 Dalam hadits ini kita akan melihat keberkahan waktu sahur tersebut. Dari Abu Hurairah, Nabi shallallahu ‘alaihi wa sallam bersabda,
                             </p>
 
-                            <p class="font-arabic text-3xl mt-7 mb-7 text-right leading-15">
+                            <p class="font-arabic text-3xl mt-7 mb-7 text-right leading-15 md:text-2xl">
                             يَنْزِلُ رَبُّنَا تَبَارَكَ وَتَعَالَى كُلَّ لَيْلَةٍ إِلَى السَّمَاءِ الدُّنْيَا حِينَ يَبْقَى ثُلُثُ اللَّيْلِ الآخِرُ يَقُولُ مَنْ يَدْعُونِى فَأَسْتَجِيبَ لَهُ مَنْ يَسْأَلُنِى فَأُعْطِيَهُ مَنْ يَسْتَغْفِرُنِى فَأَغْفِرَ لَهُ
                             </p>
 
@@ -55,10 +96,28 @@
                         </div>
                     </article>
 
-                    <!-- item 2 -->
-                     <!-- Diambil dari : https://quran.nu.or.id/doa -->
+                    <!-- item 3 -->
+                    <article class="w-fit h-fit border border-solid border-black rounded-4xl">
+                        <div class="w-full bg-green rounded-t-4xl">
+                            <h1 class="ml-5 p-2 text-4xl font-relation text-white">Doa Masuk Masjid</h1>
+                        </div>
+                        <hr class="border-0.5 border-black border-solid">
+
+                        <div class="p-10">
+                            <p class="font-arabic text-3xl mt-7 mb-7 text-right leading-15">
+                                اَللّٰهُمَّ اغْفِرْ لِيْ ذُنُوْبِيْ وَافْتَحْ لِيْ أَبْوَابَ رَحْمَتِكَ
+                            </p>
+
+                            <p class="font-description">
+                                “Ya Allah, ampuni segala dosaku dan bukalah bagiku segala pintu rahmat-Mu.”
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- item 4 -->
+                    <!-- Diambil dari : https://quran.nu.or.id/doa -->
                     <article class="w-fit h-full border border-solid border-black rounded-4xl">
-                        <div class="w-full bg-pink rounded-t-4xl">
+                        <div class="w-full bg-green rounded-t-4xl">
                             <h1 class="ml-5 p-2 text-4xl font-relation text-white">Berzikir Pagi</h1>
                         </div>
                         <hr class="border-0.5 border-black border-solid">
@@ -79,45 +138,9 @@
                         </div>
                     </article>
 
-                    <!-- item 3 -->
-                    <article class="w-fit h-fit border border-solid border-black rounded-4xl">
-                        <div class="w-full bg-pink rounded-t-4xl">
-                            <h1 class="ml-5 p-2 text-4xl font-relation text-white">Doa bangun Tidur</h1>
-                        </div>
-                        <hr class="border-0.5 border-black border-solid">
-
-                        <div class="p-10">
-                            <p class="font-arabic text-3xl mt-7 mb-7 text-right leading-15">
-                                اَلْحَمْدُ ِللّٰهِ الَّذِيْ أَحْيَانَا بَعْدَمَا أَمَاتَنَا وَإِلَيْهِ النُّشُوْرُ
-                            </p>
-
-                            <p class="font-description">
-                                “Segala puji bagi Allah yang menghidupkanku kembali setelah mematikanku dan hanya kepada-Nya akan <br>bangkit.”
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- item 4 -->
-                    <article class="w-fit h-fit border border-solid border-black rounded-4xl">
-                        <div class="w-full bg-pink rounded-t-4xl">
-                            <h1 class="ml-5 p-2 text-4xl font-relation text-white">Doa Masuk Masjid</h1>
-                        </div>
-                        <hr class="border-0.5 border-black border-solid">
-
-                        <div class="p-10">
-                            <p class="font-arabic text-3xl mt-7 mb-7 text-right leading-15">
-                                اَللّٰهُمَّ اغْفِرْ لِيْ ذُنُوْبِيْ وَافْتَحْ لِيْ أَبْوَابَ رَحْمَتِكَ
-                            </p>
-
-                            <p class="font-description">
-                                “Ya Allah, ampuni segala dosaku dan bukalah bagiku segala pintu rahmat-Mu.”
-                            </p>
-                        </div>
-                    </article>
-
                     <!-- item 5 -->
                     <article class="w-fit h-fit border border-solid border-black rounded-4xl">
-                        <div class="w-full bg-pink rounded-t-4xl">
+                        <div class="w-full bg-green rounded-t-4xl">
                             <h1 class="ml-5 p-2 text-4xl font-relation text-white">Doa Untuk Orang Tua</h1>
                         </div>
                         <hr class="border-0.5 border-black border-solid">
@@ -171,9 +194,8 @@
             </article>
         </section>
     </main>
-
-    <footer class="text-center text-xs text-gray-500 py-4">
-    © 2026 Web Ramadhan
+    <footer class="text-gray-500 text-center text-xs py-4">
+        © 2026 Web Ramadhan
     </footer>
     
 </body>

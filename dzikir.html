@@ -3,11 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dzkir Counter</title>
+    <title>Dzikir Page</title>
+
+    <link rel="stylesheet" href="src/dist/output.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        
+    <header class="bg-green text-white p-10">
+        <div>
+            <h2 class="text-3xl md:text-4xl text-center font-header text-white">Ramadhan</h2>
+            <h1 class="text-5xl md:text-8xl text-center font-relation text-yellow ml-0 md:max-block-4/6">Dzikir Counter</h1>
+        </div>
     </header>
+    <main class="max-w-4xl mx-auto px-10 py-10 space-y-20 font-description">
+
+        <div class="p-10 border-2 space-y-40 rounded-3xl text-center">
+            <section class="space-y-2 w-fit">
+
+                <div class="flex justify-center items-center gap-5 text-2xl md:text-3xl">
+                    <span class="font-relation">Target:</span>
+
+                    <input id="targetInput" min="1" type="number" placeholder="0"
+                        class="text-center rounded px-3 py-1 w-fit font-relation
+                            transition-all duration-300
+                            active:border-none">
+                </div>
+
+                <h1 id="counterDisplay" class="text-9xl transition-all duration-300">
+                    0
+                </h1>
+
+            </section>
+
+            <section class="space-x-6">
+
+                <button id="setTarget"
+                    class="bg-blue text-white px-4 py-2 rounded transition">
+                    Set Target
+                </button>
+
+                <button id="add-counter"
+                    class="bg-green text-white p-4 rounded-lg text-3xl
+                        transition active:scale-90 transform">
+                    +
+                </button>
+
+                <button id="resetBtn"
+                    class="px-4 py-2 bg-yellow rounded transition">
+                    Reset
+                </button>
+
+            </section>
+
+        </div>
+
+    </main>
+    <footer class="text-gray-500 text-center text-xs py-4">
+        © 2026 Web Ramadhan
+    </footer>
+
+    <script src="src/js/counter.js"></script>
 </body>
 </html>
