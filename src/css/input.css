@@ -14,10 +14,12 @@
 
 @theme {
     /* Color */
-    --color-yellow: #EBFB29;
+    --color-yellow: #BF9B30;
     --color-blue: #0F2144;
     --color-pink:#FF296F;
     --color-green: #072F0C;
+
+    --color-creme: #fffdf5;
 
     --color-blue-2: #62A4EC;
     --color-blue-3: #C4F0FF;

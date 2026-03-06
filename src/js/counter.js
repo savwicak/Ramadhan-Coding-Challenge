@@ -7,7 +7,7 @@ let resetBtn = document.getElementById('resetBtn')
 let targetInput = document.getElementById('targetInput')
 
 let counterValue = 0
-let goals = 0
+let goals = 33
 
 function incrementCounter() {
     counterValue++

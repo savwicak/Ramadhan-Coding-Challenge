@@ -13,23 +13,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="bg-green text-white p-10">
-        <div>
-            <h2 class="text-3xl md:text-4xl text-center font-header text-white">Ramadhan</h2>
-            <h1 class="text-5xl md:text-8xl text-center font-relation text-yellow ml-0 md:max-block-4/6">Dzikir Counter</h1>
+<body class="bg-creme">
+    <header class = "p-10">
+        <div class="text-center">
+            <h1 class="text-2xl md:text-5xl font-relation text-blue/65">Ramadhan Mubarak</h1>
+            <h2 class="text-5xl md:text-8xl font-header text-yellow">Dzikir Counter</h2>
         </div>
-    </header>
-    <main class="max-w-4xl mx-auto px-10 py-10 space-y-20 font-description">
+        <hr class="border border-solid border-black mt-12">
+        <nav class="p-6 text-lg text-black font-description">
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex justify-center gap-10">
+                <li class="cursor-pointer hover:text-pink transition"><a href="index.html">Home</a></li>
+                <li class="cursor-pointer hover:text-pink transition"><a href="doa.html">Doa-Doa</a></li>
+                <li class="cursor-pointer hover:text-pink transition"><a href="dzikir.html">Dzikir Counter</a></li>
+                <li class="cursor-pointer hover:text-pink transition"><a href="hitung-zakat.html">Hitung Zakat</a></li>
+            </ul>
 
-        <div class="p-10 border-2 space-y-40 rounded-3xl text-center">
+            <!-- Mobile Dropdown --->
+            <div class="md:hidden">
+                <details class="cursor-pointer">
+                    <summary class="text-3xl font-bold font-relation p-2 hover:text-blue"> Choose Menu</summary>
+                    <ul class="flex flex-col gap-3 border text-black p-4 rounded-sm mt-2">
+                        <li><a href="index.html" class="hover:text-yellow">Home</a></li>
+                        <hr>
+                        <li><a href="doa.html" class="hover:text-yellow">Doa-Doa</a></li>
+                        <hr>
+                        <li><a href="dzikir.html" class="hover:text-yellow">Dzikir Counter</a></li>
+                        <hr>
+                        <li><a href="hitung-zakat.html" class="hover:text-yellow">Hitung Zakat</a></li>
+                    </ul>
+                </details>
+            </div>
+        </nav>
+        <hr class="border border-solid border-black">
+    </header>
+    <main class="max-w-4xl mx-auto px-10 py-10 space-y-20 font-description text-center">
+
+        <div class="p-10 border-2 space-y-40 rounded-3xl text-center items-center align-middle">
             <section class="space-y-2 w-fit">
 
                 <div class="flex justify-center items-center gap-5 text-2xl md:text-3xl">
                     <span class="font-relation">Target:</span>
 
-                    <input id="targetInput" min="1" type="number" placeholder="0"
-                        class="text-center rounded px-3 py-1 w-fit font-relation
+                    <input id="targetInput" min="1" type="number" placeholder="33"
+                        class="text-center rounded px-3 py-1 w-full font-relation
                             transition-all duration-300
                             active:border-none">
                 </div>
@@ -46,7 +73,6 @@
                     class="bg-blue text-white px-4 py-2 rounded transition">
                     Set Target
                 </button>
-
                 <button id="add-counter"
                     class="bg-green text-white p-4 rounded-lg text-3xl
                         transition active:scale-90 transform">
