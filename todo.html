@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo - Ramadhan Mubarak</title>
+    <link rel="stylesheet" href="src/dist/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-creme">
+    <header class="p-10">
+        <div class="text-center">
+            <h1 class="text-2xl md:text-5xl font-relation text-blue/65">Ramadhan Mubarak</h1>
+            <h2 class="text-5xl md:text-8xl font-header text-yellow">To-Do list</h2>
+        </div>
+        <hr class="border border-solid border-black mt-12">
+        <nav class="p-6 text-lg text-black font-description">
+            <ul class="hidden md:flex justify-center gap-10">
+                <li class="cursor-pointer hover:text-pink transition"><a href="index.html">Home</a></li>
+                <li class="cursor-pointer hover:text-pink transition"><a href="doa.html">Doa-Doa</a></li>
+                <li class="cursor-pointer hover:text-pink transition"><a href="dzikir.html">Dzikir Counter</a></li>
+                <li class="cursor-pointer hover:text-pink transition"><a href="hitung-zakat.html">Hitung Zakat</a></li>
+                <li class="cursor-pointer hover:text-pink transition"><a href="todo.html">To-Do List</a></li>
+            </ul>
+            <div class="md:hidden">
+                <details class="cursor-pointer">
+                    <summary class="text-3xl font-bold font-relation p-2 hover:text-blue">Choose Menu</summary>
+                    <ul class="flex flex-col gap-3 border text-black p-4 rounded-sm mt-2">
+                        <li><a href="index.html" class="hover:text-yellow">Home</a></li>
+                        <hr>
+                        <li><a href="doa.html" class="hover:text-yellow">Doa-Doa</a></li>
+                        <hr>
+                        <li><a href="dzikir.html" class="hover:text-yellow">Dzikir Counter</a></li>
+                        <hr>
+                        <li><a href="hitung-zakat.html" class="hover:text-yellow">Hitung Zakat</a></li>
+                    </ul>
+                </details>
+            </div>
+        </nav>
+        <hr class="border border-solid border-black">
+    </header>
+
+    <main class="max-w-4xl mx-auto space-y-8 p-4 font-description">
+        <section>
+            <h3 class="text-4xl font-bold font-relation text-blue mb-2">Hari ke <span id="dayNumber">1</span> Ramadhan</h3>
+            <p class="text-gray-500 text-sm" id="dateDisplay">Loading...</p>
+        </section>
+        <section>
+            <div class="p-8 rounded-xl border-2 border-black bg-white">
+                <div class="space-y-2">
+                    <div class="flex justify-between font-bold text-gray-600 font-relation text-3xl">
+                        <span>Overall Progress</span>
+                        <span id="progressText">0/3</span>
+                    </div>
+                    <div class="h-8 bg-gray-200 rounded-full overflow-hidden border-2 border-black flex">
+                        <div id="progressGreen" class="h-full bg-blue transition-all duration-500" style="width: 0%"></div>
+                        <div id="progressRed" class="h-full bg-gray-200" style="width: 100%"></div>
+                    </div>
+                </div>
+                <br>
+                <div class="bg-blue-100 p-6 rounded-lg space-y-4 font-relation text-xl">
+                    <label class="flex items-center gap-3 cursor-pointer hover:bg-gray-200 p-2 rounded transition">
+                        <input id="quranCheck" type="checkbox" class="w-5 h-5 cursor-pointer" disabled>
+                        <span class="text-gray-700 text-3xl">Baca Quran</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer hover:bg-gray-200 p-2 rounded transition">
+                        <input id="puasaCheck" type="checkbox" class="w-5 h-5 cursor-pointer" disabled>
+                        <span class="text-gray-700 text-3xl">Puasa Hari Ini</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer hover:bg-gray-200 p-2 rounded transition">
+                        <input id="shalatCheck" type="checkbox" class="w-5 h-5 cursor-pointer" disabled>
+                        <span class="text-gray-700 text-3xl">Shalat Lengkap</span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-2 border-gray-800 rounded-xl p-6 bg-white shadow-lg">
+            <h4 class="text-xl font-bold text-gray-800 mb-6">Puasa Checklist</h4>
+            <div id="checklistGrid" class="grid grid-cols-5 gap-2 mb-6"></div>
+            <button onclick="saveChecklist()" class="w-full bg-blue text-white py-3 rounded-lg font-bold hover:bg-blue/70 transition text-lg">
+                💾 Simpan Puasa
+            </button>
+        </section>
+
+        <section class="border-2 border-gray-800 rounded-xl p-6 bg-white shadow-lg">
+            <h3 class="text-3xl font-bold font-relation text-gray-800 mb-6">Baca Quran</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div>
+                        <label class="font-bold text-gray-700 block mb-2">Target Halaman:</label>
+                        <input
+                            id="targetPage"
+                            type="number"
+                            min="0"
+                            placeholder="Masukkan target halaman"
+                            class="bg-gray-100 border-2 border-gray-300 h-12 rounded-lg w-full px-4 focus:outline-none focus:border-blue-500 transition"
+                        />
+                    </div>
+                    <div>
+                        <label class="font-bold text-gray-700 block mb-2">Halaman Dibaca:</label>
+                        <input
+                            id="readPage"
+                            type="number"
+                            min="0"
+                            placeholder="Masukkan halaman yang dibaca"
+                            class="bg-gray-100 border-2 border-gray-300 h-12 rounded-lg w-full px-4 focus:outline-none focus:border-blue-500 transition"
+                        />
+                    </div>
+                    <div>
+                        <p class="font-bold text-gray-700 mb-2">💡 Tips:</p>
+                        <div class="bg-yellow-100 h-20 rounded-lg p-4 text-sm text-gray-700">
+                            Baca 4-5 halaman setiap hari untuk menyelesaikan Al-Quran
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center justify-center">
+                    <div class="relative w-32 h-32 flex items-center justify-center">
+                        <svg width="140" height="140" class="absolute" style="transform: rotate(-90deg)">
+                            <circle
+                                cx="70"
+                                cy="70"
+                                r="60"
+                                fill="none"
+                                stroke="#e5e7eb"
+                                stroke-width="4"
+                            />
+                            <circle
+                                id="quranCircle"
+                                cx="70"
+                                cy="70"
+                                r="60"
+                                fill="none"
+                                stroke="#3b82f6"
+                                stroke-width="10"
+                                stroke-dasharray="376.99"
+                                stroke-dashoffset="376.99"
+                                style="transition: stroke-dashoffset 0.3s ease; stroke-linecap: round;"
+                            />
+                        </svg>
+                        <div class="text-center z-10">
+                            <p id="quranPercent" class="text-4xl font-bold text-blue-500">0%</p>
+                            <p class="text-sm text-gray-600 font-semibold">Selesai</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="saveProgress()" class="w-full mt-6 bg-blue text-white py-3 rounded-lg font-bold hover:bg-blue/80 transition">
+                💾 Simpan Progress
+            </button>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">🕌 Shalat Wajib</h2>
+
+            <div class="bg-white rounded-xl p-6 border-2 border-gray-300 mb-6">
+                <p class="font-bold text-gray-700 mb-3">Melaksanakan Ibadah</p>
+                <div class="w-full bg-gray-300 h-6 rounded-full overflow-hidden">
+                    <div id="shalatBar" class="bg-green-500 h-full transition-all duration-500" style="width: 0%"></div>
+                </div>
+                <p id="shalatText" class="text-right text-sm font-bold text-gray-600 mt-2">0/5</p>
+            </div>
+
+            <div class="bg-gray-100 rounded-xl p-6 border-2 border-gray-400 space-y-3">
+                <div class="shalat-item flex items-center justify-between bg-gray-400 text-white py-3 px-4 rounded-lg hover:bg-gray-500 transition cursor-pointer">
+                    <span class="font-semibold">Shubuh</span>
+                    <input type="checkbox" class="shalat-checkbox w-6 h-6 cursor-pointer">
+                </div>
+
+                <div class="shalat-item flex items-center justify-between bg-gray-400 text-white py-3 px-4 rounded-lg hover:bg-gray-500 transition cursor-pointer">
+                    <span class="font-semibold">Dzuhur</span>
+                    <input type="checkbox" class="shalat-checkbox w-6 h-6 cursor-pointer">
+                </div>
+
+                <div class="shalat-item flex items-center justify-between bg-gray-400 text-white py-3 px-4 rounded-lg hover:bg-gray-500 transition cursor-pointer">
+                    <span class="font-semibold">Ashar</span>
+                    <input type="checkbox" class="shalat-checkbox w-6 h-6 cursor-pointer">
+                </div>
+
+                <div class="shalat-item flex items-center justify-between bg-gray-400 text-white py-3 px-4 rounded-lg hover:bg-gray-500 transition cursor-pointer">
+                    <span class="font-semibold">Maghrib</span>
+                    <input type="checkbox" class="shalat-checkbox w-6 h-6 cursor-pointer">
+                </div>
+
+                <div class="shalat-item flex items-center justify-between bg-gray-400 text-white py-3 px-4 rounded-lg hover:bg-gray-500 transition cursor-pointer">
+                    <span class="font-semibold">Isya</span>
+                    <input type="checkbox" class="shalat-checkbox w-6 h-6 cursor-pointer">
+                </div>
+
+                <button onclick="saveShalat()" class="w-full bg-blue text-white py-3 rounded-lg font-bold hover:bg-blue/70 transition text-lg">
+                    💾 Simpan Shalat
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-gray-500 text-center text-xs py-6 mt-12">
+        © 2026 Web Ramadhan
+    </footer>
+
+    <script src="src/js/quest.js"></script>
+</body>
+</html>

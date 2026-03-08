@@ -21,15 +21,14 @@
         </div>
         <hr class="border border-solid border-black mt-12">
         <nav class="p-6 text-lg text-black font-description">
-            <!-- Desktop Menu -->
             <ul class="hidden md:flex justify-center gap-10">
                 <li class="cursor-pointer hover:text-pink transition"><a href="index.html">Home</a></li>
                 <li class="cursor-pointer hover:text-pink transition"><a href="doa.html">Doa-Doa</a></li>
                 <li class="cursor-pointer hover:text-pink transition"><a href="dzikir.html">Dzikir Counter</a></li>
                 <li class="cursor-pointer hover:text-pink transition"><a href="hitung-zakat.html">Hitung Zakat</a></li>
+                <li class="cursor-pointer hover:text-pink transition"><a href="todo.html">To-Do List</a></li>
             </ul>
 
-            <!-- Mobile Dropdown --->
             <div class="md:hidden">
                 <details class="cursor-pointer">
                     <summary class="text-3xl font-bold font-relation p-2 hover:text-blue"> Choose Menu</summary>
@@ -50,43 +49,50 @@
     <main class="max-w-4xl mx-auto px-10 py-10 space-y-20 font-description text-center">
 
         <div class="p-10 border-2 space-y-40 rounded-3xl text-center items-center align-middle">
-            <section class="space-y-2 w-fit">
-
-                <div class="flex justify-center items-center gap-5 text-2xl md:text-3xl">
-                    <span class="font-relation">Target:</span>
-
-                    <input id="targetInput" min="1" type="number" placeholder="33"
-                        class="text-center rounded px-3 py-1 w-full font-relation
-                            transition-all duration-300
-                            active:border-none">
-                </div>
-
-                <h1 id="counterDisplay" class="text-9xl transition-all duration-300">
-                    0
-                </h1>
-
-            </section>
-
-            <section class="space-x-6">
-
-                <button id="setTarget"
-                    class="bg-blue text-white px-4 py-2 rounded transition">
-                    Set Target
-                </button>
-                <button id="add-counter"
-                    class="bg-green text-white p-4 rounded-lg text-3xl
-                        transition active:scale-90 transform">
-                    +
-                </button>
-
-                <button id="resetBtn"
-                    class="px-4 py-2 bg-yellow rounded transition">
-                    Reset
-                </button>
-
-            </section>
-
+        <div class="text-center mb-8">
+            <p class="text-gray-600 text-lg mb-4">Target: <span id="targetDisplay">33</span></p>
+            
+            <div class="flex justify-center gap-2 mb-8 overflow-x-auto">
+                <button onclick="setQuickTarget(11)" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100">11</button>
+                <button onclick="setQuickTarget(33)" class="px-4 py-2 border border-gray-300 rounded-lg bg-gray-200 font-bold">33</button>
+                <button onclick="setQuickTarget(99)" class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100">99</button>
+                <input 
+                    id="targetInput" 
+                    type="number" 
+                    placeholder="Custom"
+                    class="px-3 py-2 border border-gray-300 rounded-lg w-24 text-center"
+                    onchange="setCustomTarget()"
+                >
+            </div>
         </div>
+
+        <div class="text-center mb-12">
+            <h1 id="counterDisplay" class="text-9xl font-bold text-gray-800 mb-8">0</h1>
+
+            <div class="flex justify-center items-center mb-6">
+                <div class="relative w-48 h-48">
+                    <div onclick="incrementCounter()" class="w-full h-full bg-gray-100 rounded-full flex items-center justify-center border-4 border-gray-200">
+                        <button 
+                            class="text-6xl font-bold font-relation text-gray-800 hover:text-gray-600 transition">
+                            ^
+                        </button>
+                    </div>
+
+                    <button 
+                        onclick="decrementCounter()"
+                        class="absolute text-4xl font-bold bottom-0 left-1/2 transform -translate-x-1/2 translate-y-7 w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 transition">
+                        V
+                    </button>
+                </div>
+                    <button 
+                        onclick="resetCounter()"
+                        class="text-2xl w-15 h-15 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 transition">
+                        🔄
+                    </button>
+            </div>
+        </div>
+        </div>
+        
 
     </main>
     <footer class="text-gray-500 text-center text-xs py-4">

@@ -1,47 +1,67 @@
-let addBtn = document.getElementById('add-counter')
 let counterDisplay = document.getElementById('counterDisplay')
-
-let setTargetBtn = document.getElementById('setTarget')
-let resetBtn = document.getElementById('resetBtn')
+let targetDisplay = document.getElementById('targetDisplay')
 
 let targetInput = document.getElementById('targetInput')
 
 let counterValue = 0
 let goals = 33
 
-function incrementCounter() {
-    counterValue++
-    counterDisplay.textContent = counterValue
+function setQuickTarget(value) {
+    goals = value
+    counterValue = 0
+    targetDisplay.textContent = value
+    counterDisplay.textContent = 0
+    targetInput.value = ''
+}
 
-    if (goals !== 0 && counterValue === goals) {
-        alert("Target Reached!")
+function incrementCounter() {
+    if (counterValue < goals) {
+        counterValue++
+        counterDisplay.textContent = counterValue
+
+        if (counterValue === goals) {
+            alert("🎉 Target Reached!")
+            counterDisplay.classList.add("text-green-500")
+        }
     }
 }
 
-function setGoals() {
-    goals = Number(targetInput.value)
-
-    if (goals > 0) {
-        targetInput.classList.remove("border")
-        targetInput.classList.add("border-2", "border-blue", "bg-blue-50")
-    }else{
-        alert('Minimal Target 1')
+function decrementCounter() {
+    if (counterValue > 0) {
+        counterValue--
+        counterDisplay.textContent = counterValue
+        counterDisplay.classList.remove("text-green-500")
     }
 }
 
 function resetCounter() {
     if (confirm("Reset everything?")) {
         counterValue = 0
-        goals = 0
+        goals = 33
 
         counterDisplay.textContent = 0
         counterDisplay.classList.remove("text-green-500")
 
+        targetDisplay.textContent = 33
         targetInput.value = ""
-        targetInput.classList.remove("border-2", "border-blue-500", "bg-blue-50")
+    }
+}
+
+function setCustomTarget() {
+    const inputValue = Number(targetInput.value)
+    
+    if (inputValue > 0) {
+        goals = inputValue
+        counterValue = 0
+        targetDisplay.textContent = inputValue
+        counterDisplay.textContent = 0
+    } else {
+        alert('Minimal Target 1')
     }
 }
 
 addBtn.addEventListener('click', incrementCounter)
-setTargetBtn.addEventListener('click', setGoals)
 resetBtn.addEventListener('click', resetCounter)
+targetInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') setCustomTarget()
+})
