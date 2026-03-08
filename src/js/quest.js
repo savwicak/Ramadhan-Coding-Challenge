@@ -27,6 +27,7 @@ const app = {
   },
 
   renderAll() {
+    this.updateShalatCheckbox();
     this.updateDateDisplay();
     this.renderPuasaChecklist();
     this.renderShalatList();
@@ -61,7 +62,7 @@ const app = {
       box.textContent = i;
       box.className = `w-14 h-14 border-2 rounded-lg cursor-pointer flex items-center justify-center font-bold text-lg transition-all ${
         isChecked 
-          ? 'bg-green-500 text-white border-green-600' 
+          ? 'bg-green text-white border-green-600' 
           : 'bg-gray-200 text-gray-800 border-gray-400'
       }`;
 
@@ -99,10 +100,10 @@ const app = {
 
       if (isChecked) {
         item.classList.remove('bg-gray-400');
-        item.classList.add('bg-green-500');
+        item.classList.add('bg-green/90');
       } else {
         item.classList.add('bg-gray-400');
-        item.classList.remove('bg-green-500');
+        item.classList.remove('bg-green/80');
       }
 
       const newItem = item.cloneNode(true);
@@ -120,14 +121,12 @@ const app = {
     this.updateShalatProgress();
   },
 
-  updateShalatProgress() {
-    const count = Object.values(this.data.shalat).filter(v => v).length;
-    const percent = (count / 5) * 100;
-
-    document.getElementById('shalatBar').style.width = percent + '%';
-    document.getElementById('shalatText').textContent = `${count}/5`;
-  },
-
+  updateShalatCheckbox() {
+    const shalatCheck = document.getElementById('shalatCheck');
+    const shalatCount = Object.values(this.data.shalat).filter(v => v).length;
+    shalatCheck.checked = shalatCount === 5;  // Cuma true kalo semua 5 selesai
+    },
+    
   updateQuranCircle() {
     const percent = this.data.quranTarget === 0 
       ? 0 
@@ -197,6 +196,7 @@ function saveShalat() {
   app.saveData();
   app.updateProgressBar();
   app.updateShalatProgress();
+  app.updateShalatCheckbox();
   app.renderShalatList();
   showNotification('✅ Shalat tersimpan!');
 }
