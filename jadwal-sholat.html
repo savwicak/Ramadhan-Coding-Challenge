@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Ramadhan</title>
-
+    <title>Jadwal Sholat</title>
+    
     <link rel="stylesheet" href="src/dist/output.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https:/fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 </head>
-
-<body class="text-text bg-creme">
-    <main class="max-w-8xl mx-auto px-10 py-10 md:flex-row space-y-9">
+<body class="bg-creme">
+    <header class = "p-10">
         <div class="text-center">
             <h1 class="text-2xl md:text-5xl font-relation text-blue/65">Ramadhan Mubarak</h1>
-            <h2 class="text-5xl md:text-8xl font-header text-yellow">Website Ramadhan</h2>
+            <h2 class="text-5xl md:text-8xl font-header text-yellow">Hitung Zakat</h2>
         </div>
         <hr class="border border-solid border-black mt-12">
         <nav class="p-6 text-lg text-black font-description">
@@ -53,8 +52,43 @@
             </div>
         </nav>
         <hr class="border border-solid border-black">
-    <footer class="text-gray-500 text-center text-xs py-4">
-        © 2026 Web Ramadhan
-    </footer>
+    </header>
+    <main class="max-w-6xl mx-auto space-y-8 p-4 font-description">
+        <section class="p-6 rounded-xl border-2 border-black">
+            <label class="font-bold text-gray-700 block mb-2 font-relation text-3xl">Pilih Lokasi Anda</label>
+            <select id="citySelect" class="w-full bg-gray-100 border-2 border-gray-300 h-12 rounded-lg px-4">
+                <option value="">-- Pilih Kota --</option>
+            </select>
+        </section>
+
+        <div id="loadingState" class="bg-blue-100 p-4 rounded-lg text-center hidden">
+            <p class="text-blue font-bold">Mengambil data...</p>
+        </div>
+
+        <div id="errorState" class="bg-red-100 p-4 rounded-lg text-center hidden">
+            <p class="text-red-700 font-bold">Gagal mengambil data</p>
+        </div>
+
+        <section class="rounded-xl border-2 border-black p-6 overflow-x-auto hidden" id="tableSection">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4 font-relation" id="cityName"></h3>
+            <table class="w-full border-collapse">
+                <thead>
+                    <tr class="bg-green text-white">
+                        <th class="border-2 border-black p-3">Tanggal</th>
+                        <th class="border-2 border-black p-3">Imsak</th>
+                        <th class="border-2 border-black p-3">Subuh</th>
+                        <th class="border-2 border-black p-3">Dzuhur</th>
+                        <th class="border-2 border-black p-3">Ashar</th>
+                        <th class="border-2 border-black p-3">Maghrib</th>
+                        <th class="border-2 border-black p-3">Isya</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- ini dari javascritp -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="src/js/jadwal.js"></script>
 </body>
 </html>
