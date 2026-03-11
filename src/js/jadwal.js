@@ -66,12 +66,12 @@ async function loadSchedule(cityId) {
       
       row.innerHTML = `
         <td class="border-2 border-black p-3 hover:bg-blue/10">${item.tanggal}</td>
-        <td class="border-2 border-black p-3">${item.imsak}</td>
-        <td class="border-2 border-black p-3">${item.subuh}</td>
-        <td class="border-2 border-black p-3">${item.dzuhur}</td>
-        <td class="border-2 border-black p-3">${item.ashar}</td>
-        <td class="border-2 border-black p-3">${item.maghrib}</td>
-        <td class="border-2 border-black p-3">${item.isya}</td>
+        <td class="border-2 border-black p-3 hover:bg-blue/10">${item.imsak}</td>
+        <td class="border-2 border-black p-3 hover:bg-blue/10">${item.subuh}</td>
+        <td class="border-2 border-black p-3 hover:bg-blue/10">${item.dzuhur}</td>
+        <td class="border-2 border-black p-3 hover:bg-blue/10">${item.ashar}</td>
+        <td class="border-2 border-black p-3 hover:bg-blue/10">${item.maghrib}</td>
+        <td class="border-2 border-black p-3 hover:bg-blue/10">${item.isya}</td>
       `;
       
       tableBody.appendChild(row);
