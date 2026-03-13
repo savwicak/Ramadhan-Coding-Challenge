@@ -199,7 +199,7 @@ function saveProgress() {
 function showNotif(msg) {
   const notif = document.createElement('div');
   notif.textContent = msg;
-  notif.className = 'fixed top-4 right-4 px-6 py-3 bg-greens text-white rounded-lg font-bold shadow-lg z-50';
+  notif.className = 'fixed top-4 right-4 px-6 py-3 bg-green text-white rounded-lg font-bold shadow-lg z-50';
   document.body.appendChild(notif);
   setTimeout(() => notif.remove(), 2000);
 }
