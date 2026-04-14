@@ -1,8 +1,8 @@
-# Ramadhan Coding Challenge 2026 🌙
+# Ramadan Coding Challenge 2026 🌙
 
-Website ini dibuat sebagai bagian dari **Ramadhan Coding Challenge 2026**, dengan tujuan melatih konsistensi coding selama bulan Ramadhan serta membuat website bertema Ramadhan yang menampilkan berbagai informasi seperti doa, jadwal, dan konten islami lainnya.
+This website was created as part of the **Ramadan Coding Challenge 2026**, with the goal of practicing consistent coding during the month of Ramadan and building a Ramadan-themed website that features various information such as prayers, schedules, and other Islamic content.
 
-Melalui project ini saya belajar menggunakan **Tailwind CSS** sekaligus melatih kemampuan dalam membuat website dengan teknologi baru :3
+Through this project, I learned to use **Tailwind CSS** while honing my skills in building websites with new technologies :3
 
 ## 🛠 Tech Stack
 
@@ -15,50 +15,50 @@ Melalui project ini saya belajar menggunakan **Tailwind CSS** sekaligus melatih 
 </p>
 
 
-## ✨ Fitur Utama
+## ✨ Key Features
 
-fitur-fitur yang sudah berjalan dengan baik:
+Features that are already working well:
 
 * 📱 Responsive design (mobile & desktop)
-* 🕌 Halaman Doa-doa Ramadhan
-* 📿 Halaman Dzikir
-* 💰 Halaman Hitung Zakat
-* ✅ Halaman Todo List
-* 🕋 Halaman Jadwal Sholat
+* 🕌 Ramadan Prayers Page
+* 📿 Dhikr Page
+* 💰 Zakat Calculator Page
+* ✅ To-Do List Page
+* 🕋 Prayer Schedule Page
 
-## 🚀 Cara Menjalankan Website Secara Lokal
+## 🚀 How to Run the Website Locally
 
-### Menjalankan Secara Lokal
+### Running Locally
 
-1. Clone repository ini
+1. Clone this repository
 
 ```bash
 git clone https://github.com/savwicak/Ramadhan-Coding-Challenge.git
 ```
 
-2. Masuk ke folder project
+2. Navigate to the project folder
 
 ```bash
  cd .\Ramadhan-Coding-Challenge\
 ```
 
-3. Jalankan Tailwind CLI untuk build CSS
+3. Run Tailwind CLI to build CSS
 
 ```bash
 npx tailwindcss -i ./src/input.css -o ./src/dist/output.css --watch
 ```
 
-4. Jalankan website menggunakan **Live Server** atau buka file `index.html`.
+4. Run the website using **Live Server** or open the `index.html` file.
 
 ---
 
-## 🧪 Optimasi & Testing
+## 🧪 Optimization & Testing
 
-Website sudah diuji kompatibilitasnya pada beberapa browser:
+The website has been tested for compatibility on several browsers:
 
 * ✅ Google Chrome
 * ✅ Safari
 * ✅ Microsoft Edge
-* ✅ Opera Browser
+* ✅ Opera
 
-⭐ Terima kasih :D
+⭐ Thank you :D
