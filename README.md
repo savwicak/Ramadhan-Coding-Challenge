@@ -62,3 +62,4 @@ The website has been tested for compatibility on several browsers:
 * ✅ Opera
 
 ⭐ Thank you :D
+(UPDATE) English version README.md
